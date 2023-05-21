@@ -4,7 +4,7 @@
 On the login window you can use the email id and password we send to you inorder to login into the website. If you want to change the password type a wrong password and press on login. Now you can see a Forgot Password button, press on it to reset your password.<nr>
 <img src="https://github.com/aswin-asokan/eazyGo_Auth/assets/86108610/a22034c1-a6a8-4eab-8a12-dbe6b60f1d42" alt="forgot"><br>
 On the home screen you will be having a map interface and 8 buttons:<br>
-<img src="fotor_2023-5-21_12_51_19](https://github.com/aswin-asokan/eazyGo_Auth/assets/86108610/47f9e7da-48c3-48d3-aa60-c3959b3da3b7" alt="map"><br>
+<img src="https://github.com/aswin-asokan/eazyGo_Auth/assets/86108610/47f9e7da-48c3-48d3-aa60-c3959b3da3b7" alt="map"><br>
 <b>Press on:
   <br>1. Show road issue
   <br>2. Show pipe line leakages
@@ -15,7 +15,7 @@ On the home screen you will be having a map interface and 8 buttons:<br>
   <br>7. Move to initial location
   <br>8. Log out
   <br>
-</b>![)
+</b>
 
 ### Selecting a Report:
 On the map interface you can see reports made as markers.<br>
