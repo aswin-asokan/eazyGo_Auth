@@ -1,10 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:eazygoauth/map.dart';
+import 'package:eazygoauth/map_auth.dart';
 import 'package:eazygoauth/variables.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:html';
+import 'package:url_launcher/url_launcher.dart';
 
 class loginPage extends StatefulWidget {
   const loginPage({super.key});
@@ -52,15 +53,29 @@ class _loginPageState extends State<loginPage> {
                 children: [
                   TextButton(
                       onPressed: () {
-                        final email = 'aswin_asokan@outlook.com';
-                        final subject = 'Register as Authority in eazyGo';
-
-                        final Uri params = Uri(
-                          scheme: 'mailto',
-                          path: email,
-                          query: 'subject=$subject',
+                        final Uri emailUri = Uri(
+                          scheme: 'https',
+                          path: 'aswin_asokan@outlook.com',
+                          queryParameters: {
+                            'subject': 'Authority Registration - [Your Name]',
+                            'body':
+                                'Dear eazyGo Team,\n\tI hope this email finds you well. I am writing to express my interest in registering as an authority on your website. I believe that my expertise and credentials make me a suitable candidate for this role.\n\nPlease find attached the necessary documents and area of provision location to support my registration as an authority, including:\n\n1.[Proof Document 1]\n2.[Proof Document 2]\n3.[location(latitude and longitude if possible)]\n\n\tI kindly request you to review my application and consider granting me the authority status. I am confident that I can contribute valuable insights and assistance to the users of your website.\n\tIf you require any additional information or have any questions, please do not hesitate to contact me. I am readily available at [Your Contact Information].\n\nThank you for considering my application. I look forward to the opportunity to serve as an authority on your website.\n\nBest regards,\n\n[Your Name]\n[Your Title/Position]\n[Your Contact Information]',
+                          },
                         );
-                        window.open(params.toString(), '_blank');
+
+                        final gmailUrl = Uri(
+                          scheme: 'https',
+                          host: 'mail.google.com',
+                          path: '/mail/u/0/',
+                          queryParameters: {
+                            'view': 'cm',
+                            'to': emailUri.path,
+                            'su': emailUri.queryParameters['subject'],
+                            'body': emailUri.queryParameters['body'],
+                          },
+                        );
+
+                        window.open(gmailUrl.toString(), '_blank');
                         Navigator.pop(context);
                       },
                       child: Row(
@@ -180,6 +195,9 @@ class _loginPageState extends State<loginPage> {
                   Container(
                       height: height * 0.13,
                       child: Image.asset('images/logo.png')),
+                  SizedBox(
+                    width: 20,
+                  ),
                   Text('Authority\nLogin',
                       style: GoogleFonts.urbanist(
                           color: Color(0xff1c6758),
@@ -362,7 +380,7 @@ class _loginPageState extends State<loginPage> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: ((context) => const map())));
+                                  builder: ((context) => const map_auth())));
                         }).onError((error, stackTrace) {
                           setState(() {
                             a = true;

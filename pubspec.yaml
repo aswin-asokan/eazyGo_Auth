@@ -44,6 +44,9 @@ dependencies:
   google_maps_flutter: ^2.2.6
   url_launcher: ^6.1.10
   flutter_email_sender: ^5.2.0
+  flutter_map: ^4.0.0
+  latlong2: ^0.8.1
+  flutter_map_marker_popup: ^4.1.0
 
 dev_dependencies:
   flutter_test:
