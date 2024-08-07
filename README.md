@@ -3,6 +3,7 @@
 A user-friendly website specifically designed for authorities to efficiently manage reports submitted by users through the EazyGo mobile application.
 
 - **Link:** You can visit the site **[here](https://eazygo-375211.web.app/#/)**
+- Use username: pwdaluva@gmail.com and password: password
 
 ### Main Features
 
