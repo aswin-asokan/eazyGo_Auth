@@ -1,9 +1,9 @@
 # eazyGo-Authority
 
-A user-friendly website specifically designed for authorities to efficiently manage reports submitted by users through the EazyGo mobile application.
+> [!WARNING]
+> Support for this application has been discontinued. The Firebase services and Google Cloud Platform (GCP) APIs used by the application have been deprecated and are no longer operational.
 
-- **Link:** You can visit the site **[here](https://eazygo-375211.web.app/#/)**
-- Use username: pwdaluva@gmail.com and password: password
+A user-friendly website specifically designed for authorities to efficiently manage reports submitted by users through the EazyGo mobile application.
 
 ### Main Features
 
